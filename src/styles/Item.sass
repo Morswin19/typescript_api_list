@@ -1,0 +1,109 @@
+@import "./sass-variables.sass"
+
+div.item
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 90%
+    max-width: 1200px
+    height: 150px
+    margin: auto
+    margin-top: 60px
+    padding: 10px
+    background-color: $clight
+    color: $csecond
+    font-size: 20px
+    box-shadow: 5px 5px 10px 0px rgba($cthird, 0.9), -5px -5px 10px 0px rgba(red, 0.8)
+    transition: 0.1s
+    border-radius: 75px
+    z-index: 10
+    &:nth-child(even)
+        background-color: rgba($cmain, 1)
+        transform: translateX(-25px)
+    &:nth-child(odd)
+        transform: translateX(25px)
+    &:hover
+        background-color: rgba($cfourth, 1)
+        box-shadow: 5px 5px 10px 0px rgba($cshadow, 0.16), -5px -5px 10px 0px rgba($cshadow, 0.16)
+        h3
+            color: $clight
+
+    .itemInfoContainer
+        width: 100%
+        ul
+            display: flex
+            justify-content: space-around
+            align-items: center
+            padding: 0
+            margin: 0
+            list-style: none
+            li
+                width: 280px
+                h3
+                    position: relative
+                    margin: 0
+                    font-size: 24px
+                    font-weight: 500
+                    z-index: 10
+                h2
+                    position: relative
+                    margin: 0
+                    text-align: right
+                    color: $csecond
+                    -webkit-text-stroke-width: 1px
+                    -webkit-text-stroke-color: $clight
+                    font-size: 90px
+                    font-weight: 800
+                    z-index: 10
+        .img
+            position: absolute
+            display: inline
+            left: 50%
+            top: 50%
+            transform: translateX(-50%) translateY(-50%)
+            width: 150px
+            height: 200px
+            overflow: hidden
+            box-shadow: 5px 5px 10px 0px (rgba($clight, 0.9))
+
+            img
+                width: 100%
+                height: 100%
+
+@media (max-width: 950px)
+    div.item
+        .itemInfoContainer
+            ul
+                justify-content: space-between
+                li
+                    margin: 20px
+                    width: 25vw
+            img
+                display: inline
+
+@media (max-width: 500px)
+    div.item
+        width: 95%
+        margin-top: 30px
+        &:nth-child(even)
+            transform: translateX(0px)
+        &:nth-child(odd)
+            transform: translateX(0px)
+
+        .itemInfoContainer
+            ul
+                li
+                    width: 35vw
+
+                    h2
+                        font-size: 50px
+
+                .img
+                    width: 0px
+                    height: 0px
+
+                    img
+                        display: none
+            .img
+                display: none

@@ -1,0 +1,84 @@
+@import "./sass-variables.sass"
+
+#header
+    display: flex
+    justify-content: center
+    margin-top: 90px
+    #headerTextContainer  
+        h1
+            margin: 0px
+            color: rgba($cthird, 0.9)
+            font-size: 120px
+            font-weight: 700
+            line-height: 100px
+        h2
+            margin: 0px
+            margin-top: 10px
+            color: $cthird
+            font-size: 28px
+            font-weight: 300
+        
+form
+    display: flex
+    justify-content: space-around
+    width: 479px
+    height: 39px
+    margin-top: 90px
+    margin-bottom: 30px
+    padding: 0
+    background: rgba($clight,0.21)
+    border: 1px solid rgba($cfourth, 0.21)
+    border-radius: 0
+    box-shadow: 5px 10px 10px rgba($cshadow, 0.1)
+    input
+        width: 440px
+        height: 39px
+        padding-left: 20px
+        border: none
+        background: none
+        color: $cthird
+        outline: none
+        &:focus
+            outline: none !important
+            border: 1px solid $cthird
+        &::placeholder
+            font-family: 'Titillium Web', sans-serif
+            color: rgba($cfourth, 0.41)
+            font-size: 20px
+            font-weight: 200
+    & > div
+        position: relative
+        width: 39px
+        height: 39px
+        background: $cthird
+        box-shadow: 5px 10px 10px rgba($cshadow, 0.06)
+        & > div
+            position: absolute
+            top: 9px
+            left: 7px
+            width: 17.59px
+            height: 17.59px
+            background-color: $clight
+            border-radius: 50%
+            & > div
+                position: absolute
+                top: 11px
+                left: 16px
+                transform: rotate(125deg)
+                width: 5.41px
+                height: 12.18px
+                background-color: $clight
+
+@media(max-width: 500px)
+    #header
+        #headerTextContainer  
+            h1
+                font-size: 70px        
+    form
+        width: 300px
+        margin-top: 30px
+        & > div
+            width: 39px
+            height: 39px
+            min-width: 39px
+            height: 39px

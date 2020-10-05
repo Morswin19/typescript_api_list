@@ -1,0 +1,27 @@
+@import "./sass-variables.sass"
+
+#aboutUs
+    display: flex
+    flex-direction: column
+    margin-top: 60px
+    margin-bottom: 90px
+    align-items: center
+    h1
+        color: rgba($cthird, 0.9)
+        font-size: 120px
+        font-weight: 700
+        text-align: center
+        margin: 0
+    #paragraphs
+        margin-top: 60px
+        max-width: 1000px
+        width: 80%
+        p
+            color: $cthird
+            text-align: justify
+            
+@media(max-width: 500px)
+    #aboutUs
+        h1
+            font-size: 70px
+

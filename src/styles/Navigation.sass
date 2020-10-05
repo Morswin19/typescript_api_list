@@ -1,0 +1,49 @@
+@import "./sass-variables.sass"
+
+.naviList
+        display: flex
+        list-style: none
+        width: 100%
+        justify-content: space-around
+        margin: 0px
+        margin-top: 50px
+        padding: 0
+
+        li
+                width: 50%
+                height: 100px
+                background-color: rgba($cthird, 0.9)
+                display: flex
+                align-items: center
+                &:hover
+                        background-color: $csecond
+                &:nth-child(1)
+                        margin-right: 25px
+                        border-top-right-radius: 50px
+                        border-bottom-right-radius: 50px
+                &:nth-child(2)
+                        margin-left: 25px   
+                        border-top-left-radius: 50px
+                        border-bottom-left-radius: 50px    
+                a
+                        width: 100%
+                        height: 100px
+                        color: $clight
+                        font-size: 30px
+                        font-weight: 700
+                        line-height: 100px
+                        text-decoration: none
+                        text-align: center
+                
+                &:hover
+                        color: black
+
+@media(max-width: 500px)
+        .naviList          
+                li   
+                        a
+                                font-size: 25px
+                &:nth-child(1)
+                        margin-right: 10px
+                &:nth-child(2)
+                        margin-left: 10px   
