@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "552739cf947173b3da32a78edb0b24ad",
+    "revision": "52106b3c482c1ed5f2b6a2a77485fd21",
     "url": "/typescript_api_list/index.html"
   },
   {
