@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../styles/Search.sass";
+import '../styles/Search.sass'
 
 //component with title and search
 const Search = (props: any) => {

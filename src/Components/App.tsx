@@ -20,16 +20,17 @@ export interface IData {
 }
 
 const App = () => {
+  //data variable with all Api filtered records
   const [data, setData] = useState([]);
 
+  //fetching data from public Api, fetching name, division and abbreviation from api
   const loadData = async () => {
     const response = await fetch("https://www.balldontlie.io/api/v1/teams");
     const result = await response.json();
-    setData(result.data.filter((item, index) => index < 15));
-    // console.log(result.data);
-    // console.log(result.data[0]);
+    setData(result.data.filter((item, index: number) => index < 15));
   };
 
+  //call loading data function when component is mount
   useEffect(() => {
     loadData();
   }, []);
@@ -45,17 +46,16 @@ const App = () => {
               <AboutUs />
             </Route>
             <Route path="/" exact>
-              <List data={data} records={1} />
-              {/* <p>{data[0].city}</p> */}
+              <List data={data} />
             </Route>
             <Route path="/1" exact>
-              <List data={data} records={1} />
+              <List data={data} />
             </Route>
             <Route path="/2" exact>
-              <List data={data} records={2} />
+              <List data={data} />
             </Route>
             <Route path="/3" exact>
-              <List data={data} records={3} />
+              <List data={data} />
             </Route>
             <Route path="/*" exact>
               <NotMatch />

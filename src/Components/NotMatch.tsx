@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/NotMatch.sass";
 
-//this view will shown when user type wrong path
+//this component will shown when user type wrong path
 const NotMatch = () => {
   return (
     <div id="notMatch">

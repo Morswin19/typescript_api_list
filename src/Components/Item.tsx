@@ -1,8 +1,8 @@
 import React from "react";
-import '../styles/Item.sass'
+import "../styles/Item.sass";
 
 type Props = {
-  number: string;
+  number: number;
   abbreviation: string;
   name: string;
   division: string;
